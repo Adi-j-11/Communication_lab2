@@ -24,9 +24,9 @@ y3=blind_iq_compensation(v); %blind IQ compensation
 [Kest,Pest]=pilot_iq_imb_est(g,phi,dc_i,dc_q);%Pilot based estimation
 y4=iqImb_compensation(v,Kest,Pest);%IQ comp. using estimated values
 %Enable this section - if you want to plot constellation diagram -
-%figure(1);plot(real(z),imag(z),'rO'); hold on;
-%plot(real(y4),imag(y4),'b*'); hold off;
-%title(['Eb/N0=',num2str(EbN0dB(j)),' (dB)']);pause;
+figure(1);plot(real(z),imag(z),'rO'); hold on;
+plot(real(y4),imag(y4),'b*'); hold off;
+title(['Eb/N0=',num2str(EbN0dB(i)),' (dB)']);
 %-------IQ Detectors - defined in section 3.5.4 chapter 3--------
 [estTxSymbols_1,dcap_1]= iqOptDetector(z,ref);%No compensation
 [estTxSymbols_2,dcap_2]= iqOptDetector(v,ref);%DC compensation only

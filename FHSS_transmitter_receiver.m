@@ -1,5 +1,5 @@
 %***************Source*********************
-nBits = 60;%number of source bits to transmit
+nBits = 20;%number of source bits to transmit
 Rb = 20e3; %bit rate of source information in bps
 %**********BFSK definitions*****************
 fsk_type = 'NONCOHERENT'; %BFSK generation type at the transmitter
